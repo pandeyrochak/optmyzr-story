@@ -84,7 +84,7 @@ const Drawer: React.FC<DrawerProps> = ({
             <X className="h-5 w-5 text-darkGrey" />
           </button>
         )}
-        <div className="h-full overflow-auto p-6">
+        <div className="h-full overflow-auto">
           {children}
         </div>
       </div>

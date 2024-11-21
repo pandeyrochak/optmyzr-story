@@ -52,3 +52,12 @@ next-env.d.ts
 **/public/sw.js.map
 **/public/workbox-*.js.map
 **/public/worker-*.js.map
+
+# chromatic
+.chromatic
+storybook-static
+dist
+packages/components/src/**/*.js
+packages/components/src/**/*.stories.js
+packages/components/src/**/*.mdx
+packages/components/*.tgz

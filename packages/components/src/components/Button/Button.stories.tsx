@@ -24,7 +24,7 @@ const meta: Meta<typeof Button> = {
       description: "Whether the button is disabled",
       table: {
         type: { summary: "boolean" },
-        defaultValue: { summary: false },
+        defaultValue: { summary: "false" },
       },
     },
     icon: {

@@ -13,5 +13,8 @@ export type { SelectProps, SelectOption } from './components/Select/Select'
 export { Drawer } from './components/Drawer/Drawer'
 export type { DrawerProps } from './components/Drawer/Drawer'
 
+export { Stepper } from './components/Stepper/Stepper'
+export type { StepperProps, Step } from './components/Stepper/Stepper'
+
 export { cn } from './lib/utils'
 import './styles/index.css'

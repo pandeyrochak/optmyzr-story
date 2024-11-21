@@ -1,11 +1,23 @@
 {
-  "name": "@optmyzr/components",
-  "version": "0.1.0",
+  "name": "f1-demo-components",
+  "version": "1.0.1",
   "private": false,
   "type": "module",
-  "main": "dist/index.js",
-  "module": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "style": "./dist/index.css",
+  "exports": {
+    ".": {
+      "import": "./dist/index.es.js",
+      "require": "./dist/index.es.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./dist/index.css": {
+      "import": "./dist/index.css",
+      "require": "./dist/index.css"
+    }
+  },
   "files": [
     "dist"
   ],
@@ -45,7 +57,11 @@
     "type": "git",
     "url": ""
   },
-  "keywords": ["react", "components", "ui"],
+  "keywords": [
+    "react",
+    "components",
+    "ui"
+  ],
   "author": "Your Name",
   "license": "MIT"
 }

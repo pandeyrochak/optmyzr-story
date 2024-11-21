@@ -24,7 +24,7 @@ const Stepper: React.FC<StepperProps> = ({
 }) => {
   return (
     <div className={cn("flex w-full gap-2", className)}>
-      {steps.map((step, index) => {
+      {steps.map((step) => {
         const isActive = activeStep === step.id
         const isCompleted = step.isCompleted || activeStep > step.id
 
@@ -33,7 +33,6 @@ const Stepper: React.FC<StepperProps> = ({
             <div
               className={cn(
                 "flex flex-1 items-center",
-                index === steps.length - 1 && "flex-none"
               )}
             >
               <div
@@ -48,7 +47,7 @@ const Stepper: React.FC<StepperProps> = ({
                     "flex h-8 w-8 items-center justify-center rounded-full border-2",
                     isActive && "border-primary bg-primary text-white",
                     isCompleted && "border-primary bg-primary text-white",
-                    !isActive && !isCompleted && "border-border bg-white text-darkGrey"
+                    !isActive && !isCompleted && "border-border bg-midGrey text-white"
                   )}
                 >
                   {isCompleted ? (
@@ -56,10 +55,7 @@ const Stepper: React.FC<StepperProps> = ({
                   ) : (
                     <Typography
                       variant="label"
-                      className={cn(
-                        isActive && "text-white",
-                        !isActive && "text-darkGrey"
-                      )}
+                      className={cn('text-white')}
                     >
                       {step.id}
                     </Typography>

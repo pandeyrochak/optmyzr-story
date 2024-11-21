@@ -6,13 +6,17 @@ import dts from 'vite-plugin-dts'
 export default defineConfig({
   plugins: [
     react(),
-    dts({ include: ['src'] })
+    dts({
+      include: ['src'],
+      exclude: ['src/**/*.stories.tsx', 'src/**/*.test.tsx'],
+    })
   ],
   build: {
     lib: {
       entry: resolve(__dirname, 'src/index.ts'),
+      name: 'OptmyzrComponents',
       formats: ['es'],
-      fileName: 'index'
+      fileName: (format) => `index.${format}.js`
     },
     rollupOptions: {
       external: ['react', 'react-dom', 'react/jsx-runtime'],
@@ -21,11 +25,13 @@ export default defineConfig({
           react: 'React',
           'react-dom': 'ReactDOM'
         },
-        output: {
-          assetFileNames: 'index.[ext]'
-        }
+        assetFileNames: 'index.[ext]',
+        preserveModules: false,
+        compact: true,
+        minifyInternalExports: true
       }
     },
     cssCodeSplit: false,
+    sourcemap: true
   }
 })

@@ -1,0 +1,7 @@
+node_modules/
+src/
+tests/
+.vscode/
+dist/  # Exclude dist in dev but include it in the final package using "files"
+*.log
+*.env
